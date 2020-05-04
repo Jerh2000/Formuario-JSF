@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            .leyenda{
+                margin:10px 0;
+                padding-bottom:10px;
+                width:100%;
+                border-bottom:3px solid #78788c;
+                text-align: center;
+                color: #757575 ;
+            }
+            body{
+                background:#59ABE3;margin:0;
+                font-family:'Segoe UI',sans-serif;
+            }
+            .btn{
+                padding:8px 12px;
+                margin-top:0; 
+                margin:8px 0 0;
+                width: 220px;
+                border-radius: 15px;
+                font-family:'Segoe UI',sans-serif;border:2px solid #78788c;
+                background:#00C851;color:#fff;
+                cursor:pointer;
+                transition:all .3s
+            }
+            .btn:hover{
+                background:#007E33;color:#fff
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1 class="leyenda">Este es el resultado</h1>
+        <h4><h:outputText escape="false" value="#{userMB.validation}"/></h4>
+        <br />
+        <h:form>
+
+            <h:commandButton id="backButton" value="Back"  action="index" class="btn"/>
+
+        </h:form>
+
+    </h:body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body{
+                background:#59ABE3;margin:0;
+                font-family:'Segoe UI',sans-serif;
+            }
+            .formulario{
+                width:340px;height:460px;
+                background:#e6e6e6;
+                border-radius:8px;
+                box-shadow:0 0 40px -10px #000;
+                margin:calc(50vh - 220px) auto;
+                padding:20px 30px;
+                max-width:calc(100vw - 40px);
+                box-sizing:border-box;
+                font-family:'Segoe UI',sans-serif;
+                position:relative;
+            }
+            h3{
+                margin:10px 0;
+                padding-bottom:10px;
+                width:100%;
+                border-bottom:3px solid #78788c;
+                text-align: center;
+                color: #757575 ;
+            }
+            input{
+                width:100%;
+                padding:10px;box-sizing:border-box;
+                background:none;
+                outline:none;
+                resize:none;
+                border:0;
+                font-family:'Segoe UI',sans-serif;transition:all .3s;
+                border-bottom:2px solid #33b5e5;
+            }
+            input:focus{border-bottom:2px solid #0099CC}
+            .btn{
+                padding:8px 12px;
+                margin-top:2px; 
+                margin:8px 0 0;
+                border-radius: 15px;
+                font-family:'Segoe UI',sans-serif;border:2px solid #78788c;
+                background:#00C851;color:#fff;
+                cursor:pointer;
+                transition:all .3s
+            }
+            .btn:hover{
+                background:#007E33;color:#fff
+            }
+        </style>
+    </h:head>
+    <h:body>
+
+        <h:form class="formulario">
+            <h3>Introduce tus datos con el codigo de validación</h3>    
+            Usuario: <h:inputText id="user" size="40" maxlength="60" value="#{userMB.user}" required="true"/> <br/>
+            Nombre de usaurio: <h:inputText id="nickName" size="40" maxlength="60" value="#{userMB.nickName}" required="true"/><br/>
+            Email: <h:inputText id="email" size="40" maxlength="60" value="#{userMB.email}" required="true"/><br/>
+            *Codigo de validación:<h:inputText id="validationCode" size="40" maxlength="60" value="#{userMB.validationCode}" required="true"/><br/>
+            <p style="margin-top:3px;margin-bottom: 0; padding: 0; font-size: 12px; color:red;"><b>*El codigo de validacion es necesario para validar al usuario</b></p><br/>
+            <h:commandButton class="btn" id="submit" value="SUBMIT" action="Validacion" />
+        </h:form>
+        <br />
+
+    </h:body>
+</html>
+
